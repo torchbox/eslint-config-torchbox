@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-torchbox",
+  "version": "0.1.0",
+  "description": "Shareable ESLint config, based on airbnb/javascript",
+  "license": "MIT",
+  "author": "Torchbox Ltd",
+  "main": "./config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torchbox/eslint-config-torchbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/torchbox/eslint-config-torchbox/issues"
+  },
+  "homepage": "https://github.com/torchbox/eslint-config-torchbox",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "torchbox"
+  ],
+  "files": [
+    "config.js"
+  ],
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-react": "^7.14.2",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-react": "^7.14.2"
+  },
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  }
+}
