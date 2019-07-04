@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-torchbox",
   "version": "0.1.0",
-  "description": "Shareable ESLint config, based on airbnb/javascript",
+  "description": "Shareable ESLint config following Torchbox’s code style",
   "license": "MIT",
   "author": "Torchbox Ltd",
   "main": "./config.js",
