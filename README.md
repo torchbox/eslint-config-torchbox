@@ -25,3 +25,24 @@ module.exports = {
 
 - Use ESLint’s [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
 - This config is [Prettier](https://prettier.io/)-compatible, but it is still usable by projects which do not wish to use Prettier.
+
+## What’s included
+
+> See [`config.js`](./config.js) for full config defintion.
+
+### Extends
+
+- [`eslint:recommended`](https://eslint.org/docs/rules/)
+- [`prettier`](https://github.com/prettier/eslint-config-prettier)
+- [`prettier/react`](https://github.com/prettier/eslint-config-prettier)
+
+### Custom rules
+
+- [indent](https://eslint.org/docs/rules/indent): `error, 4`
+- [linebreak-style](https://eslint.org/docs/rules/linebreak-style): `error, unix`
+- [quotes](https://eslint.org/docs/rules/quotes): `error, single`
+- [jsx-quotes](https://eslint.org/docs/rules/jsx-quotes): `error, prefer-double`
+- [semi](https://eslint.org/docs/rules/semi): `error, always`
+- [react/jsx-uses-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md): `2`
+- [react/jsx-uses-vars](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md): `2`
+- [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md): `2`
