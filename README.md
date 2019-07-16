@@ -9,7 +9,7 @@
 Install the config along with its peer dependencies:
 
 ```sh
-npm install --save-dev eslint eslint-config-prettier eslint-plugin-react eslint-config-torchbox
+npx install-peerdeps --dev eslint-config-torchbox
 ```
 
 Then [configure ESLint to use this config](https://eslint.org/docs/user-guide/configuring#extending-configuration-files). As a `.eslintrc.js` in the root of your project:
