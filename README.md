@@ -41,21 +41,12 @@ module.exports = {
 
 ## What’s included
 
-> See [`config.js`](./config.js) for full config defintion.
+> See [`config.js`](./config.js) for the config defintion, and [`semver.test.js.snap`](./src/__snapshots__/semver.test.js.snap) for the whole set of rules and settings.
 
 ### Extends
 
-- [`eslint:recommended`](https://eslint.org/docs/rules/)
+- [`airbnb`](https://www.npmjs.com/package/eslint-config-airbnb)
 - [`prettier`](https://github.com/prettier/eslint-config-prettier)
 - [`prettier/react`](https://github.com/prettier/eslint-config-prettier)
 
 ### Custom rules
-
-- [indent](https://eslint.org/docs/rules/indent): `error, 4`
-- [linebreak-style](https://eslint.org/docs/rules/linebreak-style): `error, unix`
-- [quotes](https://eslint.org/docs/rules/quotes): `error, single`
-- [jsx-quotes](https://eslint.org/docs/rules/jsx-quotes): `error, prefer-double`
-- [semi](https://eslint.org/docs/rules/semi): `error, always`
-- [react/jsx-uses-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md): `2`
-- [react/jsx-uses-vars](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md): `2`
-- [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md): `2`
