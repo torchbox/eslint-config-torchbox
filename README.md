@@ -26,6 +26,19 @@ module.exports = {
 - Use ESLint’s [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
 - This config is [Prettier](https://prettier.io/)-compatible, but it is still usable by projects which do not wish to use Prettier.
 
+### Experimental syntax
+
+By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax transpiled with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
+
+```js
+module.exports = {
+  // See https://github.com/torchbox/eslint-config-torchbox for rules.
+  extends: 'torchbox',
+  // Support non-standard, experimental JS features that Babel knows how to process.
+  parser: 'babel-eslint',
+};
+```
+
 ## What’s included
 
 > See [`config.js`](./config.js) for full config defintion.
