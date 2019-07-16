@@ -8,7 +8,6 @@ module.exports = {
         es6: true,
         jest: true,
     },
-    plugins: ['react'],
     rules: {
         // Do not enforce reassignment to properties of object parameters.
         'no-param-reassign': [2, { props: false }],
