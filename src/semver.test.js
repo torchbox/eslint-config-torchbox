@@ -20,6 +20,11 @@ describe('semver - should those tests break, consider releasing a new major vers
     });
 
     it('has stable config rules', () => {
-        expect(getComputedConfig(config)).toMatchSnapshot();
+        const computed = getComputedConfig(config);
+        // Replace values that contain machine-specific information.
+        computed.extends = computed.extends.map((extend) =>
+            extend.replace(/.*node_modules\//, ''),
+        );
+        expect().toMatchSnapshot();
     });
 });
