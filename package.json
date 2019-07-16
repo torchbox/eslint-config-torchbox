@@ -29,6 +29,7 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
+    "eslint-rule-documentation": "^1.0.23",
     "jest": "^24.8.0",
     "prettier": "^1.18.2"
   },
@@ -44,7 +45,9 @@
   "scripts": {
     "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "build": "node src/documentation.js && prettier --write README.md",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build"
   }
 }
