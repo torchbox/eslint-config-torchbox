@@ -1,13 +1,7 @@
 'use strict';
 
 module.exports = {
-    extends: ['eslint:recommended', 'prettier', 'prettier/react'],
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
-        sourceType: 'module',
-    },
+    extends: ['airbnb', 'prettier', 'prettier/react'],
     env: {
         browser: true,
         commonjs: true,
