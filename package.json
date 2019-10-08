@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-torchbox",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Shareable ESLint config following Torchbox’s code style",
   "license": "MIT",
   "author": "Torchbox Ltd",
