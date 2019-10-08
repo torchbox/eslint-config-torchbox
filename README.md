@@ -9,7 +9,7 @@
 Install the config along with its peer dependencies:
 
 ```sh
-npx install-peerdeps --dev eslint-config-torchbox
+npx install-peerdeps --dev eslint-config-torchbox@latest
 ```
 
 Then [configure ESLint to use this config](https://eslint.org/docs/user-guide/configuring#extending-configuration-files). As a `.eslintrc.js` in the root of your project:
