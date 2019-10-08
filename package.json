@@ -48,6 +48,7 @@
     "build": "node src/documentation.js && prettier --write README.md",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
+    "prepare": "./.githooks/deploy.sh",
     "prepublishOnly": "npm run build"
   }
 }
