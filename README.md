@@ -291,3 +291,7 @@ module.exports = {
 - [jsx-a11y/no-noninteractive-element-to-interactive-role](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-to-interactive-role.md): `error, ul: listbox, menu, menubar, radiogroup, tablist, tree…`
 - [jsx-a11y/no-noninteractive-tabindex](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-tabindex.md): `error, tags: , roles: tabpanel`
 - [jsx-a11y/anchor-is-valid](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md): `error, components: Link, specialLink: to, aspects: noHref, i…`
+
+## Contributing
+
+See the [contribution guidelines](CONTRIBUTING.md) for guidance and setup instructions.

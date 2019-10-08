@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
 const getRuleURI = require('eslint-rule-documentation');
@@ -95,6 +94,10 @@ ${formatRows(customRules, baseConfig.rules)}
 ### Inherited rules
 
 ${formatRows(inheritedRules, rules)}
+
+## Contributing
+
+See the [contribution guidelines](CONTRIBUTING.md) for guidance and setup instructions.
 `;
 
     const oldREADME = fs
