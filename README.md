@@ -26,6 +26,20 @@ module.exports = {
 - Use ESLint’s [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
 - This config is [Prettier](https://prettier.io/)-compatible, but it is still usable by projects which do not wish to use Prettier.
 
+### React
+
+This config is meant first and foremost for React projects, where it will detect which rules to apply based on the version of React used on the project. The config can also be used on non-React projects – just make sure to disable the version check by adding: the following in your config:
+
+```js
+module.exports = {
+  // [...]
+  settings: {
+    // Manually set the version to disable automated detection of the "react" dependency.
+    react: { version: 'latest' },
+  },
+};
+```
+
 ### Experimental syntax
 
 By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax transpiled with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
