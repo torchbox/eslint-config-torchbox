@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Update to ESLint v6 and eslint-config-airbnb v18, significantly changing rules that are applied with this config ([#4](https://github.com/torchbox/eslint-config-torchbox/issues/4)).
 - Include rules for the React [Rules of hooks](https://reactjs.org/docs/hooks-rules.html) ([#3](https://github.com/torchbox/eslint-config-torchbox/issues/3)), from the airbnb config update.
+- Automatically detect which version of React is being used on the project to lint accordingly (part of the airbnb config update).
 
 ### BREAKING CHANGES
 
