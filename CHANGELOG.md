@@ -6,11 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [0.3.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.2.0...v0.3.0) (2019-10-08)
+
 ### Features
 
-- Update to ESLint v6 and eslint-config-airbnb v18, significantly changing rules that are applied with this config ([#4](https://github.com/torchbox/eslint-config-torchbox/issues/4)).
-- Include rules for the React [Rules of hooks](https://reactjs.org/docs/hooks-rules.html) ([#3](https://github.com/torchbox/eslint-config-torchbox/issues/3)), from the airbnb config update.
-- Automatically detect which version of React is being used on the project to lint accordingly (part of the airbnb config update).
+- Update to ESLint v6 and eslint-config-airbnb v18, significantly changing rules that are applied with this config ([#4](https://github.com/torchbox/eslint-config-torchbox/issues/4), [#10](https://github.com/torchbox/eslint-config-torchbox/pull/10)).
+- Include rules for the React [Rules of hooks](https://reactjs.org/docs/hooks-rules.html) ([#3](https://github.com/torchbox/eslint-config-torchbox/issues/3), [#10](https://github.com/torchbox/eslint-config-torchbox/pull/10)), from the airbnb config update.
+- Automatically detect which version of React is being used on the project to lint accordingly (part of the airbnb config update) ([#10](https://github.com/torchbox/eslint-config-torchbox/pull/10)).
 
 ### BREAKING CHANGES
 
