@@ -25,6 +25,7 @@ Object {
     "import",
     "react",
     "jsx-a11y",
+    "react-hooks",
   ],
   "reportUnusedDisableDirectives": undefined,
   "rules": Object {
@@ -1801,6 +1802,12 @@ Object {
       },
     ],
     "radix": Array [
+      "error",
+    ],
+    "react-hooks/exhaustive-deps": Array [
+      "error",
+    ],
+    "react-hooks/rules-of-hooks": Array [
       "error",
     ],
     "react/boolean-prop-naming": Array [

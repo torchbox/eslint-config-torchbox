@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    extends: ['airbnb', 'prettier', 'prettier/react'],
+    extends: ['airbnb', 'airbnb/hooks', 'prettier', 'prettier/react'],
     env: {
         browser: true,
         commonjs: true,

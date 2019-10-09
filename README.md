@@ -80,6 +80,8 @@ module.exports = {
 
 ### Inherited rules
 
+- [react-hooks/rules-of-hooks](https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md)
+- [react-hooks/exhaustive-deps](https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md)
 - [jsx-a11y/anchor-has-content](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md): `error, components:`
 - [jsx-a11y/aria-role](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md): `error, ignoreNonDom: false, ignoreNonDOM: false`
 - [jsx-a11y/aria-props](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md)

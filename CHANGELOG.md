@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [0.3.1](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.0...v0.3.1) (2019-10-09)
+
+### Bug fixes
+
+- Add missing `airbnb/hooks` extend for the React [Rules of hooks](https://reactjs.org/docs/hooks-rules.html) ([#3](https://github.com/torchbox/eslint-config-torchbox/issues/3), [#10](https://github.com/torchbox/eslint-config-torchbox/pull/10)).
+
 ## [0.3.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.2.0...v0.3.0) (2019-10-08)
 
 ### Features
