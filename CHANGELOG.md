@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+### Bug fixes
+
+- Whitelist `setupTests` files for devDependencies imports check.
+
 ## [0.3.1](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.0...v0.3.1) (2019-10-09)
 
 ### Bug fixes
