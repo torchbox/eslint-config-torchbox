@@ -25,6 +25,25 @@ module.exports = {
 
 - Use ESLint’s [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
 - This config is [Prettier](https://prettier.io/)-compatible, but it is still usable by projects which do not wish to use Prettier.
+- We recommend using a `.eslintignore` so ESLint can be targeted at all files, with a blacklist of files to ignore.
+
+Here’s a package.json `run` script and an ignore file to get you started:
+
+```json
+"lint:js": "eslint --report-unused-disable-directives .",
+```
+
+`.eslintignore` (adapt to your project):
+
+```
+.git
+node_modules
+coverage
+static_compiled
+venv
+```
+
+Note the point of the ignore file isn’t just to determine which JS files we don’t want to be linted, but also speed up linting by excluding large folders.
 
 ### React
 
