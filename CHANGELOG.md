@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [0.3.3](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.2...v0.3.3) (2020-03-12)
+
+### Bug fixes
+
+- Fix dev dependencies warnings in Storybook config and stories written in `.stories.js` files.
+
 ## [0.3.2](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.1...v0.3.2) (2019-10-15)
 
 ### Bug fixes

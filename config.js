@@ -38,10 +38,11 @@ module.exports = {
                 devDependencies: [
                     '**/tests/**',
                     '**/stories/**',
+                    '**/storybook/**',
                     'spec/**',
                     '**/__tests__/**',
                     '**/__mocks__/**',
-                    '**/*{.,_}{test,spec,story}.*',
+                    '**/*{.,_}{test,spec,story,stories}.*',
                     '**/jest.config.*',
                     '**/setupTests.*',
                     '**/webpack.config.*',
