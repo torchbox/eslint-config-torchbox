@@ -26,6 +26,7 @@ module.exports = {
 - Use ESLint’s [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
 - This config is [Prettier](https://prettier.io/)-compatible, but it is still usable by projects which do not wish to use Prettier.
 - We recommend using a `.eslintignore` so ESLint can be targeted at all files, with a blacklist of files to ignore.
+- If relevant, use ESLint’s [`overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) feature to make it more permissive for certain files – for example Storybook stories or unit tests, where code standards are different.
 
 Here’s a package.json `run` script and an ignore file to get you started:
 
@@ -44,6 +45,24 @@ venv
 ```
 
 Note the point of the ignore file isn’t just to determine which JS files we don’t want to be linted, but also speed up linting by excluding large folders.
+
+Here is an example of using `overrides` to disable a few specific rules for stories:
+
+```js
+module.exports = {
+  // […]
+  overrides: [
+    {
+      files: ['*.stories.tsx'],
+      rules: {
+        // Don’t mandate typing for Storybook stories.
+        '@typescript-eslint/explicit-module-boundary-types': 0,
+        '@typescript-eslint/explicit-function-return-type': 0,
+      },
+    },
+  ],
+};
+```
 
 ### React
 
@@ -70,6 +89,60 @@ module.exports = {
   // Support non-standard, experimental JS features that Babel knows how to process.
   parser: 'babel-eslint',
 };
+```
+
+### TypeScript
+
+This config doesn’t include TypeScript support out of the box. We can install and configure a TypeScript parser and ESLint plugin to make it compatible. Here is how to proceed:
+
+```sh
+npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+And update your ESLint configuration to:
+
+```js
+module.exports = {
+  // See https://github.com/torchbox/eslint-config-torchbox for rules.
+  extends: [
+    'torchbox',
+    // TypeScript-aware plugins which either add extra rules for TS code, or override built-in rules for compatibility.
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  rules: {
+    // TypeScript compatibility rule changes.
+    'react/jsx-filename-extension': [2, { extensions: ['.tsx'] }],
+    'import/extensions': [
+      2,
+      'always',
+      {
+        ignorePackages: true,
+        pattern: {
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      },
+    ],
+  },
+};
+```
+
+As of ESLint v6, you will also need to tell ESLint to parse TypeScript files with the `--ext` flag:
+
+```sh
+eslint --report-unused-disable-directives --ext .js,.jsx,.ts,.tsx .
+```
+
+Note that the TypeScript-friendly rules included in the config above aren’t as strict as our baseline config. To bridge this gap, consider using `--max-warnings 0` to treat all warnings as errors:
+
+```sh
+eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.tsx .
 ```
 
 ## What’s included
