@@ -45,8 +45,8 @@
     "eslint-plugin-react-hooks": "^1.7.0"
   },
   "scripts": {
-    "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
-    "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml,html}'",
+    "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,json5,yaml,yml,html}'",
     "build": "node src/documentation.js && prettier --write README.md",
     "test": "jest --coverage",
     "test:watch": "jest --watch",

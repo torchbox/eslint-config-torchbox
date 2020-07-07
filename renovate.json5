@@ -1,0 +1,42 @@
+{
+  extends: ['config:base'],
+  // https://renovatebot.com/docs/configuration-options/#commitbodytable
+  commitBodyTable: true,
+  // https://renovatebot.com/docs/configuration-options/#ignoredeps
+  ignoreDeps: [
+    'eslint',
+    'eslint-config-prettier',
+    'eslint-config-airbnb',
+    'eslint-plugin-import',
+    'eslint-plugin-jsx-a11y',
+    'eslint-plugin-react',
+    'eslint-plugin-react-hooks',
+  ],
+  // https://renovatebot.com/docs/configuration-options/#labels
+  labels: ['enhancement'],
+  // https://renovatebot.com/docs/configuration-options/#prcreation
+  prCreation: 'not-pending',
+  // Use shorter commit messages to account for long dependency names.
+  // https://docs.renovatebot.com/configuration-options/#commitmessagetopic
+  commitMessageTopic: '{{depName}}',
+  // https://renovatebot.com/docs/configuration-options/#prbodycolumns
+  prBodyColumns: ['Package', 'Update', 'Type', 'Change'],
+  // https://renovatebot.com/docs/configuration-options/#rebasestaleprs
+  rebaseStalePrs: true,
+  node: {
+    major: {
+      enabled: true,
+    },
+    // https://renovatebot.com/docs/node/#configuring-support-policy
+    supportPolicy: ['current'],
+  },
+  packageRules: [
+    { packageNames: ['prettier'], groupName: 'prettier', automerge: true },
+    { packageNames: ['jest'], groupName: 'jest', automerge: true },
+    {
+      packageNames: ['eslint-rule-documentation'],
+      groupName: 'eslint-rule-documentation',
+      automerge: true,
+    },
+  ],
+}
