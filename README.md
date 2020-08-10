@@ -104,32 +104,42 @@ And update your ESLint configuration to:
 ```js
 module.exports = {
   // See https://github.com/torchbox/eslint-config-torchbox for rules.
-  extends: [
-    'torchbox',
-    // TypeScript-aware plugins which either add extra rules for TS code, or override built-in rules for compatibility.
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    // TypeScript compatibility rule changes.
-    'react/jsx-filename-extension': [2, { extensions: ['.tsx'] }],
-    'import/extensions': [
-      2,
-      'always',
-      {
-        ignorePackages: true,
-        pattern: {
-          js: 'never',
-          jsx: 'never',
-          ts: 'never',
-          tsx: 'never',
-        },
+  extends: 'torchbox',
+  // Using Babel parser for experimental syntax
+  parser: 'babel-eslint',
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'torchbox',
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      rules: {
+        'react/jsx-filename-extension': [
+          2,
+          // Allow mixed JSX in JavaScript files.
+          { extensions: ['.js', '.tsx'] },
+        ],
+        'import/extensions': [
+          2,
+          'always',
+          {
+            ignorePackages: true,
+            pattern: {
+              js: 'never',
+              jsx: 'never',
+              ts: 'never',
+              tsx: 'never',
+            },
+          },
+        ],
       },
-    ],
-  },
+    },
+  ],
 };
 ```
 
