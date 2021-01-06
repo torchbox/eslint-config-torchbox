@@ -1,6 +1,6 @@
-# [eslint-config-torchbox](https://www.npmjs.com/package/eslint-config-torchbox) [<img src="https://raw.githubusercontent.com/torchbox/eslint-config-torchbox/master/.github/eslint-logo.svg?sanitize=true" alt="ESLint" width="90" height="90" align="right">](https://eslint.org)
+# [eslint-config-torchbox](https://www.npmjs.com/package/eslint-config-torchbox) [<img src="https://raw.githubusercontent.com/torchbox/eslint-config-torchbox/main/.github/eslint-logo.svg?sanitize=true" alt="ESLint" width="90" height="90" align="right">](https://eslint.org)
 
-[![eslint-config-torchbox on npm](https://img.shields.io/npm/v/eslint-config-torchbox.svg)](https://www.npmjs.com/package/eslint-config-torchbox) [![Build Status](https://travis-ci.com/torchbox/eslint-config-torchbox.svg?branch=master)](https://travis-ci.com/torchbox/eslint-config-torchbox)
+[![eslint-config-torchbox on npm](https://img.shields.io/npm/v/eslint-config-torchbox.svg)](https://www.npmjs.com/package/eslint-config-torchbox) [![Build Status](https://travis-ci.com/torchbox/eslint-config-torchbox.svg?branch=main)](https://travis-ci.com/torchbox/eslint-config-torchbox)
 
 > Shareable ESLint config following Torchbox’s code style.
 

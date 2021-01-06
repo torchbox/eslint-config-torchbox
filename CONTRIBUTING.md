@@ -40,7 +40,7 @@ npm run lint
 - Update the version number in `package.json`, following semver.
 - Make sure the documentation is up-to-date (`npm run build`)
 - Make a PR and squash merge it.
-- Back on master with the PR merged, use `npm publish`.
+- Back on main with the PR merged, use `npm publish`.
 - Head over to [https://www.npmjs.com/package/eslint-config-torchbox](https://www.npmjs.com/package/eslint-config-torchbox) and check that all is well.
 - Finally, go to GitHub and create tag then a release for the new version, with the corresponding CHANGELOG entry as content.
 - Done!
