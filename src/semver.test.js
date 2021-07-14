@@ -6,7 +6,7 @@ const getComputedConfig = require('./getComputedConfig');
 
 describe('semver - should those tests break, consider releasing a new major version of the package', () => {
     it('has no dependencies', () => {
-        expect(Object.keys(pkg.dependencies)).toHaveLength(0);
+        expect(typeof pkg.dependencies).toBe('undefined');
     });
 
     it('has stable peerDependencies', () => {
