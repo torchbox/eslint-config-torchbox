@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ## Features
 
 - Update to ESLint v7 and [eslint-config-airbnb v18.2.1](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md), changing rules that are applied with this config.
+- Update to eslint-config-prettier v8, which no longer requires specifying sub-configurations separately for different frameworks or syntaxes.
 
 Here is a summary of significant rule changes:
 
@@ -48,6 +49,7 @@ This release updates most of the dependencies of the config:
 | ------------------------- | ------- | ------- |
 | eslint                    | ^6.0.0  | ^7.2.0  |
 | eslint-config-airbnb      | ^18.0.0 | ^18.2.1 |
+| eslint-config-prettier    | ^6.0.0  | ^8.3.0  |
 | eslint-plugin-react       | ^7.16.0 | ^7.24.0 |
 | eslint-plugin-react-hooks | ^1.7.0  | ^4.2.0  |
 | eslint-plugin-jsx-a11y    | ^6.2.0  | ^6.4.1  |

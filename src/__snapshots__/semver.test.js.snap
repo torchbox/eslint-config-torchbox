@@ -30,6 +30,57 @@ Object {
   ],
   "reportUnusedDisableDirectives": undefined,
   "rules": Object {
+    "@babel/object-curly-spacing": Array [
+      "off",
+    ],
+    "@babel/semi": Array [
+      "off",
+    ],
+    "@typescript-eslint/brace-style": Array [
+      "off",
+    ],
+    "@typescript-eslint/comma-dangle": Array [
+      "off",
+    ],
+    "@typescript-eslint/comma-spacing": Array [
+      "off",
+    ],
+    "@typescript-eslint/func-call-spacing": Array [
+      "off",
+    ],
+    "@typescript-eslint/indent": Array [
+      "off",
+    ],
+    "@typescript-eslint/keyword-spacing": Array [
+      "off",
+    ],
+    "@typescript-eslint/member-delimiter-style": Array [
+      "off",
+    ],
+    "@typescript-eslint/no-extra-parens": Array [
+      "off",
+    ],
+    "@typescript-eslint/no-extra-semi": Array [
+      "off",
+    ],
+    "@typescript-eslint/object-curly-spacing": Array [
+      "off",
+    ],
+    "@typescript-eslint/quotes": Array [
+      0,
+    ],
+    "@typescript-eslint/semi": Array [
+      "off",
+    ],
+    "@typescript-eslint/space-before-function-paren": Array [
+      "off",
+    ],
+    "@typescript-eslint/space-infix-ops": Array [
+      "off",
+    ],
+    "@typescript-eslint/type-annotation-spacing": Array [
+      "off",
+    ],
     "accessor-pairs": Array [
       "off",
     ],
@@ -56,7 +107,7 @@ Object {
       },
     ],
     "arrow-body-style": Array [
-      0,
+      "error",
       "as-needed",
       Object {
         "requireReturnForObjectLiteral": false,
@@ -72,6 +123,15 @@ Object {
         "after": true,
         "before": true,
       },
+    ],
+    "babel/object-curly-spacing": Array [
+      "off",
+    ],
+    "babel/quotes": Array [
+      0,
+    ],
+    "babel/semi": Array [
+      "off",
     ],
     "block-scoped-var": Array [
       "error",
@@ -228,6 +288,39 @@ Object {
       Object {
         "null": "ignore",
       },
+    ],
+    "flowtype/boolean-style": Array [
+      "off",
+    ],
+    "flowtype/delimiter-dangle": Array [
+      "off",
+    ],
+    "flowtype/generic-spacing": Array [
+      "off",
+    ],
+    "flowtype/object-type-curly-spacing": Array [
+      "off",
+    ],
+    "flowtype/object-type-delimiter": Array [
+      "off",
+    ],
+    "flowtype/quotes": Array [
+      "off",
+    ],
+    "flowtype/semi": Array [
+      "off",
+    ],
+    "flowtype/space-after-type-colon": Array [
+      "off",
+    ],
+    "flowtype/space-before-generic-bracket": Array [
+      "off",
+    ],
+    "flowtype/space-before-type-colon": Array [
+      "off",
+    ],
+    "flowtype/union-intersection-spacing": Array [
+      "off",
     ],
     "for-direction": Array [
       "error",
@@ -1804,7 +1897,7 @@ Object {
       "off",
     ],
     "prefer-arrow-callback": Array [
-      0,
+      "error",
       Object {
         "allowNamedFunctions": false,
         "allowUnboundThis": true,
@@ -1976,11 +2069,11 @@ Object {
       "off",
     ],
     "react/jsx-closing-bracket-location": Array [
-      "error",
+      "off",
       "line-aligned",
     ],
     "react/jsx-closing-tag-location": Array [
-      "error",
+      "off",
     ],
     "react/jsx-curly-brace-presence": Array [
       "error",
@@ -1990,21 +2083,21 @@ Object {
       },
     ],
     "react/jsx-curly-newline": Array [
-      "error",
+      "off",
       Object {
         "multiline": "consistent",
         "singleline": "consistent",
       },
     ],
     "react/jsx-curly-spacing": Array [
-      "error",
+      "off",
       "never",
       Object {
         "allowMultiline": true,
       },
     ],
     "react/jsx-equals-spacing": Array [
-      "error",
+      "off",
       "never",
     ],
     "react/jsx-filename-extension": Array [
@@ -2016,7 +2109,7 @@ Object {
       },
     ],
     "react/jsx-first-prop-new-line": Array [
-      "error",
+      "off",
       "multiline-multiprop",
     ],
     "react/jsx-fragments": Array [
@@ -2031,11 +2124,11 @@ Object {
       },
     ],
     "react/jsx-indent": Array [
-      "error",
+      "off",
       2,
     ],
     "react/jsx-indent-props": Array [
-      "error",
+      "off",
       2,
     ],
     "react/jsx-key": Array [
@@ -2045,11 +2138,14 @@ Object {
       "off",
     ],
     "react/jsx-max-props-per-line": Array [
-      "error",
+      "off",
       Object {
         "maximum": 1,
         "when": "multiline",
       },
+    ],
+    "react/jsx-newline": Array [
+      "off",
     ],
     "react/jsx-no-bind": Array [
       0,
@@ -2100,7 +2196,7 @@ Object {
       "off",
     ],
     "react/jsx-one-expression-per-line": Array [
-      "error",
+      "off",
       Object {
         "allow": "single-child",
       },
@@ -2113,7 +2209,7 @@ Object {
       },
     ],
     "react/jsx-props-no-multi-spaces": Array [
-      "error",
+      "off",
     ],
     "react/jsx-props-no-spreading": Array [
       "error",
@@ -2149,7 +2245,7 @@ Object {
       "always",
     ],
     "react/jsx-tag-spacing": Array [
-      "error",
+      "off",
       Object {
         "afterOpening": "never",
         "beforeClosing": "never",
@@ -2164,7 +2260,7 @@ Object {
       "error",
     ],
     "react/jsx-wrap-multilines": Array [
-      "error",
+      "off",
       Object {
         "arrow": "parens-new-line",
         "assignment": "parens-new-line",
@@ -2507,6 +2603,15 @@ Object {
         },
       },
     ],
+    "standard/array-bracket-even-spacing": Array [
+      "off",
+    ],
+    "standard/computed-property-even-spacing": Array [
+      "off",
+    ],
+    "standard/object-curly-even-spacing": Array [
+      "off",
+    ],
     "strict": Array [
       "error",
       "never",
@@ -2532,6 +2637,15 @@ Object {
       "off",
       "never",
     ],
+    "unicorn/empty-brace-spaces": Array [
+      "off",
+    ],
+    "unicorn/no-nested-ternary": Array [
+      "off",
+    ],
+    "unicorn/number-literal-case": Array [
+      "off",
+    ],
     "use-isnan": Array [
       "error",
     ],
@@ -2546,6 +2660,114 @@ Object {
     ],
     "vars-on-top": Array [
       "error",
+    ],
+    "vue/array-bracket-newline": Array [
+      "off",
+    ],
+    "vue/array-bracket-spacing": Array [
+      "off",
+    ],
+    "vue/arrow-spacing": Array [
+      "off",
+    ],
+    "vue/block-spacing": Array [
+      "off",
+    ],
+    "vue/block-tag-newline": Array [
+      "off",
+    ],
+    "vue/brace-style": Array [
+      "off",
+    ],
+    "vue/comma-dangle": Array [
+      "off",
+    ],
+    "vue/comma-spacing": Array [
+      "off",
+    ],
+    "vue/comma-style": Array [
+      "off",
+    ],
+    "vue/dot-location": Array [
+      "off",
+    ],
+    "vue/func-call-spacing": Array [
+      "off",
+    ],
+    "vue/html-closing-bracket-newline": Array [
+      "off",
+    ],
+    "vue/html-closing-bracket-spacing": Array [
+      "off",
+    ],
+    "vue/html-end-tags": Array [
+      "off",
+    ],
+    "vue/html-indent": Array [
+      "off",
+    ],
+    "vue/html-quotes": Array [
+      "off",
+    ],
+    "vue/html-self-closing": Array [
+      0,
+    ],
+    "vue/key-spacing": Array [
+      "off",
+    ],
+    "vue/keyword-spacing": Array [
+      "off",
+    ],
+    "vue/max-attributes-per-line": Array [
+      "off",
+    ],
+    "vue/max-len": Array [
+      0,
+    ],
+    "vue/multiline-html-element-content-newline": Array [
+      "off",
+    ],
+    "vue/mustache-interpolation-spacing": Array [
+      "off",
+    ],
+    "vue/no-extra-parens": Array [
+      "off",
+    ],
+    "vue/no-multi-spaces": Array [
+      "off",
+    ],
+    "vue/no-spaces-around-equal-signs-in-attribute": Array [
+      "off",
+    ],
+    "vue/object-curly-newline": Array [
+      "off",
+    ],
+    "vue/object-curly-spacing": Array [
+      "off",
+    ],
+    "vue/object-property-newline": Array [
+      "off",
+    ],
+    "vue/operator-linebreak": Array [
+      "off",
+    ],
+    "vue/script-indent": Array [
+      "off",
+    ],
+    "vue/singleline-html-element-content-newline": Array [
+      "off",
+    ],
+    "vue/space-in-parens": Array [
+      "off",
+    ],
+    "vue/space-infix-ops": Array [
+      "off",
+    ],
+    "vue/space-unary-ops": Array [
+      "off",
+    ],
+    "vue/template-curly-spacing": Array [
+      "off",
     ],
     "wrap-iife": Array [
       "off",

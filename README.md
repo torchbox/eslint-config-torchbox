@@ -286,6 +286,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [import/no-self-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md)
 - [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md): `error, maxDepth: ∞, ignoreExternal: false`
 - [import/no-useless-path-segments](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md): `error, commonjs: true`
+- [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style): `error, as-needed, requireReturnForObjectLiteral: false`
 - [constructor-super](https://eslint.org/docs/rules/constructor-super)
 - [no-class-assign](https://eslint.org/docs/rules/no-class-assign)
 - [no-const-assign](https://eslint.org/docs/rules/no-const-assign)
@@ -297,6 +298,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [no-useless-rename](https://eslint.org/docs/rules/no-useless-rename): `error, ignoreDestructuring: false, ignoreImport: false, igno…`
 - [no-var](https://eslint.org/docs/rules/no-var)
 - [object-shorthand](https://eslint.org/docs/rules/object-shorthand): `error, always, ignoreConstructors: false, avoidQuotes: true`
+- [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback): `error, allowNamedFunctions: false, allowUnboundThis: true`
 - [prefer-const](https://eslint.org/docs/rules/prefer-const): `error, destructuring: any, ignoreReadBeforeAssign: true`
 - [prefer-destructuring](https://eslint.org/docs/rules/prefer-destructuring): `error, VariableDeclarator: array: false, object: true, Assig…`
 - [prefer-numeric-literals](https://eslint.org/docs/rules/prefer-numeric-literals)
