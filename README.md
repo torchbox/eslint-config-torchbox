@@ -9,6 +9,9 @@
 Install the config along with its peer dependencies:
 
 ```sh
+# npm v7:
+npm install --save-dev eslint-config-torchbox@latest
+# npm v6 and below:
 npx install-peerdeps --dev eslint-config-torchbox@latest
 ```
 
@@ -184,8 +187,8 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 
 - [react-hooks/rules-of-hooks](https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md)
 - [react-hooks/exhaustive-deps](https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md)
-- [jsx-a11y/anchor-has-content](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md): `error, components:`
-- [jsx-a11y/aria-role](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md): `error, ignoreNonDom: false, ignoreNonDOM: false`
+- [jsx-a11y/anchor-has-content](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md): `error, components: `
+- [jsx-a11y/aria-role](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md): `error, ignoreNonDOM: false`
 - [jsx-a11y/aria-props](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md)
 - [jsx-a11y/aria-proptypes](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-proptypes.md)
 - [jsx-a11y/aria-unsupported-elements](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md)
@@ -199,7 +202,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [jsx-a11y/role-has-required-aria-props](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/role-has-required-aria-props.md)
 - [jsx-a11y/role-supports-aria-props](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/role-supports-aria-props.md)
 - [jsx-a11y/tabindex-no-positive](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md)
-- [jsx-a11y/heading-has-content](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/heading-has-content.md): `error, components:`
+- [jsx-a11y/heading-has-content](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/heading-has-content.md): `error, components: `
 - [jsx-a11y/html-has-lang](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/html-has-lang.md)
 - [jsx-a11y/lang](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/lang.md)
 - [jsx-a11y/no-distracting-elements](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-distracting-elements.md): `error, elements: marquee, blink`
@@ -207,21 +210,20 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [jsx-a11y/click-events-have-key-events](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md)
 - [jsx-a11y/no-static-element-interactions](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-static-element-interactions.md): `error, handlers: onClick, onMouseDown, onMouseUp, onKeyPress…`
 - [jsx-a11y/no-noninteractive-element-interactions](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-interactions.md): `error, handlers: onClick, onMouseDown, onMouseUp, onKeyPress…`
-- [jsx-a11y/accessible-emoji](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md)
 - [jsx-a11y/aria-activedescendant-has-tabindex](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-activedescendant-has-tabindex.md)
 - [jsx-a11y/iframe-has-title](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/iframe-has-title.md)
 - [jsx-a11y/no-autofocus](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-autofocus.md): `error, ignoreNonDOM: true`
 - [jsx-a11y/no-redundant-roles](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-redundant-roles.md)
-- [jsx-a11y/media-has-caption](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/media-has-caption.md): `error, audio: , video: , track:`
+- [jsx-a11y/media-has-caption](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/media-has-caption.md): `error, audio: , video: , track: `
 - [jsx-a11y/no-interactive-element-to-noninteractive-role](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-interactive-element-to-noninteractive-role.md): `error, tr: none, presentation`
 - [jsx-a11y/no-noninteractive-element-to-interactive-role](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-to-interactive-role.md): `error, ul: listbox, menu, menubar, radiogroup, tablist, tree…`
 - [jsx-a11y/no-noninteractive-tabindex](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-tabindex.md): `error, tags: , roles: tabpanel`
 - [jsx-a11y/anchor-is-valid](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md): `error, components: Link, specialLink: to, aspects: noHref, i…`
 - [class-methods-use-this](https://eslint.org/docs/rules/class-methods-use-this): `error, exceptMethods: render, getInitialState, getDefaultPro…`
-- [react/jsx-boolean-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md): `error, never, always:`
+- [react/jsx-boolean-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md): `error, never, always: `
 - [react/jsx-no-duplicate-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md): `error, ignoreCase: true`
 - [react/jsx-no-undef](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md)
-- [react/jsx-pascal-case](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md): `error, allowAllCaps: true, ignore:`
+- [react/jsx-pascal-case](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md): `error, allowAllCaps: true, ignore: `
 - [react/jsx-uses-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md)
 - [react/jsx-uses-vars](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md)
 - [react/no-danger](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md): `warn`
@@ -237,7 +239,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [react/react-in-jsx-scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md)
 - [react/require-render-return](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
 - [react/self-closing-comp](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
-- [react/sort-comp](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md): `error, order: static-methods, instance-variables, lifecycle,…`
+- [react/sort-comp](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md): `error, order: static-variables, static-methods, instance-var…`
 - [react/jsx-no-target-blank](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md): `error, enforceDynamicLinks: always`
 - [react/jsx-no-comment-textnodes](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md)
 - [react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)
@@ -263,7 +265,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [react/jsx-fragments](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md): `error, syntax`
 - [react/state-in-constructor](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md): `error, always`
 - [react/static-property-placement](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md): `error, property assignment`
-- [react/jsx-props-no-spreading](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md): `error, html: enforce, custom: enforce, exceptions:`
+- [react/jsx-props-no-spreading](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md): `error, html: enforce, custom: enforce, explicitSpread: ignor…`
 - [strict](https://eslint.org/docs/rules/strict): `error, never`
 - [import/no-unresolved](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md): `error, commonjs: true, caseSensitive: true`
 - [import/named](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md)
@@ -275,15 +277,15 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [import/first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
 - [import/no-duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
 - [import/extensions](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md): `error, ignorePackages, js: never, mjs: never, jsx: never`
-- [import/order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md): `error, groups: builtin, external, internal`
+- [import/order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md): `error, groups: builtin, external, internal, warnOnUnassigned…`
 - [import/newline-after-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md)
 - [import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)
 - [import/no-dynamic-require](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md)
 - [import/no-webpack-loader-syntax](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)
 - [import/no-named-default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md)
 - [import/no-self-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md)
-- [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md): `error, maxDepth: null`
-- [import/no-useless-path-segments](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md)
+- [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md): `error, maxDepth: ∞, ignoreExternal: false`
+- [import/no-useless-path-segments](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md): `error, commonjs: true`
 - [constructor-super](https://eslint.org/docs/rules/constructor-super)
 - [no-class-assign](https://eslint.org/docs/rules/no-class-assign)
 - [no-const-assign](https://eslint.org/docs/rules/no-const-assign)
@@ -305,7 +307,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [symbol-description](https://eslint.org/docs/rules/symbol-description)
 - [no-delete-var](https://eslint.org/docs/rules/no-delete-var)
 - [no-label-var](https://eslint.org/docs/rules/no-label-var)
-- [no-restricted-globals](https://eslint.org/docs/rules/no-restricted-globals): `error, isFinite, isNaN, addEventListener, blur, close, close…`
+- [no-restricted-globals](https://eslint.org/docs/rules/no-restricted-globals): `error, name: isFinite, message: Use Number.isFinite instead …`
 - [no-shadow](https://eslint.org/docs/rules/no-shadow)
 - [no-shadow-restricted-names](https://eslint.org/docs/rules/no-shadow-restricted-names)
 - [no-undef](https://eslint.org/docs/rules/no-undef)
@@ -329,7 +331,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [one-var](https://eslint.org/docs/rules/one-var): `error, never`
 - [operator-assignment](https://eslint.org/docs/rules/operator-assignment): `error, always`
 - [prefer-object-spread](https://eslint.org/docs/rules/prefer-object-spread)
-- [spaced-comment](https://eslint.org/docs/rules/spaced-comment): `error, always, line: exceptions: -, +, markers: =, !, block:…`
+- [spaced-comment](https://eslint.org/docs/rules/spaced-comment): `error, always, line: exceptions: -, +, markers: =, !, /, blo…`
 - [global-require](https://eslint.org/docs/rules/global-require)
 - [no-buffer-constructor](https://eslint.org/docs/rules/no-buffer-constructor)
 - [no-new-require](https://eslint.org/docs/rules/no-new-require)
@@ -365,11 +367,11 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [no-unsafe-negation](https://eslint.org/docs/rules/no-unsafe-negation)
 - [use-isnan](https://eslint.org/docs/rules/use-isnan)
 - [valid-typeof](https://eslint.org/docs/rules/valid-typeof): `error, requireStringLiterals: true`
-- [array-callback-return](https://eslint.org/docs/rules/array-callback-return): `error, allowImplicit: true`
+- [array-callback-return](https://eslint.org/docs/rules/array-callback-return): `error, allowImplicit: true, checkForEach: false`
 - [block-scoped-var](https://eslint.org/docs/rules/block-scoped-var)
 - [consistent-return](https://eslint.org/docs/rules/consistent-return)
 - [default-case](https://eslint.org/docs/rules/default-case): `error, commentPattern: ^no default$`
-- [dot-notation](https://eslint.org/docs/rules/dot-notation): `error, allowKeywords: true, allowPattern:`
+- [dot-notation](https://eslint.org/docs/rules/dot-notation): `error, allowKeywords: true, allowPattern: `
 - [eqeqeq](https://eslint.org/docs/rules/eqeqeq): `error, always, null: ignore`
 - [guard-for-in](https://eslint.org/docs/rules/guard-for-in)
 - [max-classes-per-file](https://eslint.org/docs/rules/max-classes-per-file): `error, 1`
@@ -384,7 +386,7 @@ eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.t
 - [no-extra-bind](https://eslint.org/docs/rules/no-extra-bind)
 - [no-extra-label](https://eslint.org/docs/rules/no-extra-label)
 - [no-fallthrough](https://eslint.org/docs/rules/no-fallthrough)
-- [no-global-assign](https://eslint.org/docs/rules/no-global-assign): `error, exceptions:`
+- [no-global-assign](https://eslint.org/docs/rules/no-global-assign): `error, exceptions: `
 - [no-implied-eval](https://eslint.org/docs/rules/no-implied-eval)
 - [no-iterator](https://eslint.org/docs/rules/no-iterator)
 - [no-labels](https://eslint.org/docs/rules/no-labels): `error, allowLoop: false, allowSwitch: false`

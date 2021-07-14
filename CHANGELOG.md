@@ -6,6 +6,57 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## Features
+
+- Update to ESLint v7 and [eslint-config-airbnb v18.2.1](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md), changing rules that are applied with this config.
+
+Here is a summary of significant rule changes:
+
+```diff
+jsx-a11y/aria-role (https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md):
+-`error, ignoreNonDom: false`
++`error, ignoreNonDOM: false`
+react/sort-comp (https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md):
+-`error, order: static-methods, instance-variables, lifecycle,…`
++`error, order: static-variables, static-methods, instance-var…`
+react/jsx-props-no-spreading (https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md):
+-`error, html: enforce, custom: enforce, exceptions:`
++`error, html: enforce, custom: enforce, explicitSpread: ignore`
+import/order (https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md):
+-`error, groups: builtin, external, internal`
++`error, groups: builtin, external, internal, warnOnUnassigned…`
+import/no-cycle (https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md):
+-`error, maxDepth: null`
++`error, maxDepth: ∞, ignoreExternal: false`
+import/no-useless-path-segments (https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md)
+- `error`
++`error, commonjs: true`
+array-callback-return (https://eslint.org/docs/rules/array-callback-return):
+-`error, allowImplicit: true`
++`error, allowImplicit: true, checkForEach: false`
+
+No longer enforced:
+
+- jsx-a11y/accessible-emoji (https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md) (deprecated)
+```
+
+### BREAKING CHANGES
+
+This release updates most of the dependencies of the config:
+
+| package                   | from    | to      |
+| ------------------------- | ------- | ------- |
+| eslint                    | ^6.0.0  | ^7.2.0  |
+| eslint-config-airbnb      | ^18.0.0 | ^18.2.1 |
+| eslint-plugin-react       | ^7.16.0 | ^7.24.0 |
+| eslint-plugin-react-hooks | ^1.7.0  | ^4.2.0  |
+| eslint-plugin-jsx-a11y    | ^6.2.0  | ^6.4.1  |
+| eslint-plugin-import      | ^2.18.0 | ^2.23.4 |
+
+Users of npm v7 can `npm install --save-dev eslint-config-torchbox@latest` and this will automatically install all required peer dependencies.
+
+For older versions of npm, use `npx install-peerdeps --dev eslint-config-torchbox@latest` so all other peerDependencies are updated as well.
+
 ## [0.3.3](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.2...v0.3.3) (2020-03-12)
 
 ### Bug fixes
