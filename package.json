@@ -28,7 +28,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-rule-documentation": "1.0.23",
     "jest": "27.4.3",
-    "prettier": "2.5.0"
+    "prettier": "2.5.1"
   },
   "peerDependencies": {
     "eslint": "^7.2.0",
