@@ -67,33 +67,6 @@ module.exports = {
 };
 ```
 
-### React
-
-This config is meant first and foremost for React projects, where it will detect which rules to apply based on the version of React used on the project. The config can also be used on non-React projects – just make sure to disable the version check by adding: the following in your config:
-
-```js
-module.exports = {
-  // [...]
-  settings: {
-    // Manually set the version to disable automated detection of the "react" dependency.
-    react: { version: 'latest' },
-  },
-};
-```
-
-### Experimental syntax
-
-By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax transpiled with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
-
-```js
-module.exports = {
-  // See https://github.com/torchbox/eslint-config-torchbox for rules.
-  extends: 'torchbox',
-  // Support non-standard, experimental JS features that Babel knows how to process.
-  parser: 'babel-eslint',
-};
-```
-
 ### TypeScript
 
 This config doesn’t include TypeScript support out of the box. We can install and configure a TypeScript parser and ESLint plugin to make it compatible. Here is how to proceed:
@@ -156,6 +129,42 @@ Note that the TypeScript-friendly rules included in the config above aren’t as
 
 ```sh
 eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.tsx .
+```
+
+### React
+
+This config is meant first and foremost for React projects, where it will detect which rules to apply based on the version of React used on the project. The config can also be used on non-React projects – just make sure to disable the version check by adding: the following in your config:
+
+```js
+module.exports = {
+  // [...]
+  settings: {
+    // Manually set the version to disable automated detection of the "react" dependency.
+    react: { version: 'latest' },
+  },
+};
+```
+
+### Vue
+
+We do not include linting for Vue out of the box. Have a look at the [eslint-plugin-vue user guide](https://eslint.vuejs.org/user-guide/), in particular:
+
+1. Choose the right predefined configuration based on the Vue version and desired level of strictness
+2. Use the `--ext` flag to lint `.vue` files.
+3. Make sure pre-commit hooks are configured to run ESLint on `.vue` files.
+4. If using a custom parser (for example TypeScript’s), make sure to set it up [alongside `vue-eslint-parser` as documented](https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser).
+
+### Experimental syntax
+
+By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax transpiled with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
+
+```js
+module.exports = {
+  // See https://github.com/torchbox/eslint-config-torchbox for rules.
+  extends: 'torchbox',
+  // Support non-standard, experimental JS features that Babel knows how to process.
+  parser: 'babel-eslint',
+};
 ```
 
 ## What’s included
