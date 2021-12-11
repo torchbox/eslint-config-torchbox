@@ -31,6 +31,10 @@ module.exports = {
         'react/jsx-no-bind': [0],
         // We do not want files whose content might change to have to be renamed.
         'react/jsx-filename-extension': [2, { extensions: ['.js'] }],
+        // We enforce extact props with TypeScript, not PropTypes or Flow.
+        'react/prefer-exact-props': [0],
+        // Disabled until Airbnb configuration resolves https://github.com/airbnb/javascript/issues/2505.
+        'react/function-component-definition': [0],
         // Allow devDependencies to be used in Storybook stories.
         'import/no-extraneous-dependencies': [
             2,

@@ -178,6 +178,7 @@ Object {
     "class-methods-use-this": Array [
       "error",
       Object {
+        "enforceForClassFields": true,
         "exceptMethods": Array [
           "render",
           "getInitialState",
@@ -236,7 +237,7 @@ Object {
     ],
     "complexity": Array [
       "off",
-      11,
+      20,
     ],
     "computed-property-spacing": Array [
       "off",
@@ -262,10 +263,10 @@ Object {
       },
     ],
     "default-case-last": Array [
-      "off",
+      "error",
     ],
     "default-param-last": Array [
-      "off",
+      "error",
     ],
     "dot-location": Array [
       "off",
@@ -350,7 +351,7 @@ Object {
     ],
     "function-paren-newline": Array [
       "off",
-      "consistent",
+      "multiline-arguments",
     ],
     "generator-star": Array [
       "off",
@@ -372,15 +373,12 @@ Object {
       "error",
     ],
     "grouped-accessor-pairs": Array [
-      "off",
+      "error",
     ],
     "guard-for-in": Array [
       "error",
     ],
     "handle-callback-err": Array [
-      "off",
-    ],
-    "id-blacklist": Array [
       "off",
     ],
     "id-denylist": Array [
@@ -504,6 +502,12 @@ Object {
         "optionalDependencies": false,
       },
     ],
+    "import/no-import-module-exports": Array [
+      "error",
+      Object {
+        "exceptions": Array [],
+      },
+    ],
     "import/no-internal-modules": Array [
       "off",
       Object {
@@ -531,6 +535,9 @@ Object {
     "import/no-nodejs-modules": Array [
       "off",
     ],
+    "import/no-relative-packages": Array [
+      "error",
+    ],
     "import/no-relative-parent-imports": Array [
       "off",
     ],
@@ -547,6 +554,7 @@ Object {
       "error",
       Object {
         "caseSensitive": true,
+        "caseSensitiveStrict": false,
         "commonjs": true,
       },
     ],
@@ -1120,7 +1128,7 @@ Object {
       "warn",
     ],
     "no-constructor-return": Array [
-      "off",
+      "error",
     ],
     "no-continue": Array [
       "error",
@@ -1144,7 +1152,7 @@ Object {
       "error",
     ],
     "no-dupe-else-if": Array [
-      "off",
+      "error",
     ],
     "no-dupe-keys": Array [
       "error",
@@ -1246,7 +1254,7 @@ Object {
       "error",
     ],
     "no-import-assign": Array [
-      "off",
+      "error",
     ],
     "no-inline-comments": Array [
       "off",
@@ -1286,7 +1294,7 @@ Object {
       "error",
     ],
     "no-loss-of-precision": Array [
-      "off",
+      "error",
     ],
     "no-magic-numbers": Array [
       "off",
@@ -1406,6 +1414,9 @@ Object {
     "no-new-wrappers": Array [
       "error",
     ],
+    "no-nonoctal-decimal-escape": Array [
+      "error",
+    ],
     "no-obj-calls": Array [
       "error",
     ],
@@ -1434,7 +1445,7 @@ Object {
       "off",
     ],
     "no-promise-executor-return": Array [
-      "off",
+      "error",
     ],
     "no-proto": Array [
       "error",
@@ -1452,7 +1463,7 @@ Object {
       "off",
     ],
     "no-restricted-exports": Array [
-      "off",
+      "error",
       Object {
         "restrictedNamedExports": Array [
           "default",
@@ -1632,7 +1643,7 @@ Object {
       "error",
     ],
     "no-setter-return": Array [
-      "off",
+      "error",
     ],
     "no-shadow": Array [
       "error",
@@ -1713,7 +1724,7 @@ Object {
       "error",
     ],
     "no-unreachable-loop": Array [
-      "off",
+      "error",
       Object {
         "ignore": Array [],
       },
@@ -1723,6 +1734,12 @@ Object {
     ],
     "no-unsafe-negation": Array [
       "error",
+    ],
+    "no-unsafe-optional-chaining": Array [
+      "error",
+      Object {
+        "disallowArithmeticOperators": true,
+      },
     ],
     "no-unused-expressions": Array [
       "error",
@@ -1735,6 +1752,9 @@ Object {
     ],
     "no-unused-labels": Array [
       "error",
+    ],
+    "no-unused-private-class-members": Array [
+      "off",
     ],
     "no-unused-vars": Array [
       "error",
@@ -1753,7 +1773,7 @@ Object {
       },
     ],
     "no-useless-backreference": Array [
-      "off",
+      "error",
     ],
     "no-useless-call": Array [
       "off",
@@ -1927,7 +1947,7 @@ Object {
       },
     ],
     "prefer-exponentiation-operator": Array [
-      "off",
+      "error",
     ],
     "prefer-named-capture-group": Array [
       "off",
@@ -1948,7 +1968,10 @@ Object {
       "off",
     ],
     "prefer-regex-literals": Array [
-      "off",
+      "error",
+      Object {
+        "disallowRedundantWrapping": true,
+      },
     ],
     "prefer-rest-params": Array [
       "error",
@@ -2052,7 +2075,7 @@ Object {
       },
     ],
     "react/function-component-definition": Array [
-      "off",
+      0,
       Object {
         "namedComponents": "function-expression",
         "unnamedComponents": "function-expression",
@@ -2160,6 +2183,9 @@ Object {
     "react/jsx-no-comment-textnodes": Array [
       "error",
     ],
+    "react/jsx-no-constructed-context-values": Array [
+      "error",
+    ],
     "react/jsx-no-duplicate-props": Array [
       "error",
       Object {
@@ -2173,7 +2199,7 @@ Object {
       },
     ],
     "react/jsx-no-script-url": Array [
-      "off",
+      "error",
       Array [
         Object {
           "name": "Link",
@@ -2187,13 +2213,15 @@ Object {
       "error",
       Object {
         "enforceDynamicLinks": "always",
+        "forms": false,
+        "links": true,
       },
     ],
     "react/jsx-no-undef": Array [
       "error",
     ],
     "react/jsx-no-useless-fragment": Array [
-      "off",
+      "error",
     ],
     "react/jsx-one-expression-per-line": Array [
       "off",
@@ -2280,6 +2308,9 @@ Object {
     "react/no-array-index-key": Array [
       "error",
     ],
+    "react/no-arrow-function-lifecycle": Array [
+      "error",
+    ],
     "react/no-children-prop": Array [
       "error",
     ],
@@ -2304,11 +2335,17 @@ Object {
     "react/no-find-dom-node": Array [
       "error",
     ],
+    "react/no-invalid-html-attribute": Array [
+      "error",
+    ],
     "react/no-is-mounted": Array [
       "error",
     ],
     "react/no-multi-comp": Array [
       "off",
+    ],
+    "react/no-namespace": Array [
+      "error",
     ],
     "react/no-redundant-should-component-update": Array [
       "error",
@@ -2337,6 +2374,12 @@ Object {
     "react/no-unsafe": Array [
       "off",
     ],
+    "react/no-unstable-nested-components": Array [
+      "error",
+    ],
+    "react/no-unused-class-component-methods": Array [
+      "error",
+    ],
     "react/no-unused-prop-types": Array [
       "error",
       Object {
@@ -2353,6 +2396,9 @@ Object {
     "react/prefer-es6-class": Array [
       "error",
       "always",
+    ],
+    "react/prefer-exact-props": Array [
+      0,
     ],
     "react/prefer-read-only-props": Array [
       "off",

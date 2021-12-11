@@ -1,17 +1,18 @@
 'use strict';
 const path = require('path');
-const { CLIEngine } = require('eslint');
+const { ESLint } = require('eslint');
 
 describe('config', () => {
-    it('works', () => {
+    it('works', async () => {
         console.error = jest.fn();
 
-        const cli = new CLIEngine({
+        const eslint = new ESLint({
             useEslintrc: false,
-            configFile: path.join(__dirname, '..', 'config.js'),
+            overrideConfigFile: path.join(__dirname, '..', 'config.js'),
         });
 
-        expect(cli.executeOnText('var foo\n')).toMatchObject({
+        const lintResult = await eslint.lintText('var foo\n');
+        expect(lintResult[0]).toMatchObject({
             errorCount: 2,
             warningCount: 0,
         });

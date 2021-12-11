@@ -75,8 +75,8 @@ const formatRule = (name, options) => {
     return row;
 };
 
-const generate = () => {
-    const config = getComputedConfig(baseConfig);
+const generate = async () => {
+    const config = await getComputedConfig(baseConfig);
     const { rules } = config;
 
     const customRules = Object.keys(baseConfig.rules);
