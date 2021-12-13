@@ -39,7 +39,7 @@ Here’s a package.json `run` script and an ignore file to get you started:
 
 `.eslintignore` (adapt to your project):
 
-```
+```txt
 .git
 node_modules
 coverage
@@ -174,8 +174,8 @@ module.exports = {
 ### Extends
 
 - [`airbnb`](https://www.npmjs.com/package/eslint-config-airbnb)
-- [`prettier`](https://github.com/prettier/eslint-config-prettier)
-- [`prettier/react`](https://github.com/prettier/eslint-config-prettier)
+- [`airbnb/hooks`](https://www.npmjs.com/package/eslint-config-airbnb)
+- [`prettier`](https://github.com/prettier/eslint-config-prettier) (including configuration for TypeScript, React, Vue)
 
 <!-- Generated with: npm run build -->
 
