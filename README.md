@@ -9,7 +9,7 @@
 Install the config along with its peer dependencies:
 
 ```sh
-# npm v7:
+# npm v7 and up:
 npm install --save-dev eslint-config-torchbox@latest
 # npm v6 and below:
 npx install-peerdeps --dev eslint-config-torchbox@latest
