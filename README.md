@@ -24,6 +24,41 @@ module.exports = {
 };
 ```
 
+### TypeScript
+
+TypeScript support is currently experimental, and available separately. Make sure to install `typescript` v3 or v4 on your project, then:
+
+```js
+module.exports = {
+  // See https://github.com/torchbox/eslint-config-torchbox for rules.
+  extends: 'torchbox/typescript',
+};
+```
+
+The TypeScript configuration uses the same rules as the base configuration, with two exceptions:
+
+- Rules which will be checked by the TypeScript compiler anyway are disabled.
+- Rules which would work differently for TypeScript code have been replaced by their [@typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin), where this is possible without requiring type checking as part of linting (see [Design decisions](#design-decisions)).
+
+#### Advanced TypeScript usage
+
+For projects wanting stricter checks, consider using [linting with type information](https://typescript-eslint.io/docs/linting/type-linting/) Here is a sample ESLint configuration:
+
+```js
+module.exports = {
+  // See https://github.com/torchbox/eslint-config-torchbox for rules.
+  extends: [
+    'torchbox/typescript',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+  // See https://typescript-eslint.io/docs/linting/type-linting/.
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
+  },
+};
+```
+
 ### Tips
 
 #### Common CLI flags
@@ -70,70 +105,6 @@ module.exports = {
     },
   ],
 };
-```
-
-### TypeScript
-
-This config doesn’t include TypeScript support out of the box. We can install and configure a TypeScript parser and ESLint plugin to make it compatible. Here is how to proceed:
-
-```sh
-npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
-```
-
-And update your ESLint configuration to:
-
-```js
-module.exports = {
-  // See https://github.com/torchbox/eslint-config-torchbox for rules.
-  extends: 'torchbox',
-  // Using Babel parser for experimental syntax
-  parser: 'babel-eslint',
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      extends: [
-        'torchbox',
-        'plugin:import/typescript',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-      ],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
-      rules: {
-        'react/jsx-filename-extension': [
-          2,
-          // Allow mixed JSX in JavaScript files.
-          { extensions: ['.js', '.tsx'] },
-        ],
-        'import/extensions': [
-          2,
-          'always',
-          {
-            ignorePackages: true,
-            pattern: {
-              js: 'never',
-              jsx: 'never',
-              ts: 'never',
-              tsx: 'never',
-            },
-          },
-        ],
-      },
-    },
-  ],
-};
-```
-
-As of ESLint v6, you will also need to tell ESLint to parse TypeScript files with the `--ext` flag:
-
-```sh
-eslint --report-unused-disable-directives --ext .js,.jsx,.ts,.tsx .
-```
-
-Note that the TypeScript-friendly rules included in the config above aren’t as strict as our baseline config. To bridge this gap, consider using `--max-warnings 0` to treat all warnings as errors:
-
-```sh
-eslint --max-warnings 0 --report-unused-disable-directives --ext .js,.jsx,.ts,.tsx .
 ```
 
 ### React
@@ -184,7 +155,8 @@ module.exports = {
 
 - [`airbnb`](https://www.npmjs.com/package/eslint-config-airbnb)
 - [`airbnb/hooks`](https://www.npmjs.com/package/eslint-config-airbnb)
-- [`prettier`](https://github.com/prettier/eslint-config-prettier) (including configuration for TypeScript, React, Vue)
+- [`prettier`](https://github.com/prettier/eslint-config-prettier)
+- Additionally for TypeScript, [`plugin:@typescript-eslint/recommended`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules)
 
 <!-- Generated with: npm run build -->
 
