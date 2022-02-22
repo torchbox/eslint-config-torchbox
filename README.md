@@ -178,7 +178,7 @@ module.exports = {
 
 ## What’s included
 
-> See [`config.js`](./config.js) for the config definition, and [`semver.test.js.snap`](./src/__snapshots__/semver.test.js.snap) for the whole set of rules and settings.
+> See [`config.js`](./config.js) for the config definition, and [`src/rules.test.js`](./src/rules.test.js) for the whole set of rules and settings.
 
 ### Extends
 
