@@ -4,14 +4,20 @@ const pkg = require('../package.json');
 const config = require('../config');
 const getComputedConfig = require('./getComputedConfig');
 
-describe('semver - should those tests break, consider releasing a new major version of the package', () => {
-    it('has no dependencies', () => {
-        expect(typeof pkg.dependencies).toBe('undefined');
+describe('semver for dependencies - should those tests break, consider releasing a new major version of the package', () => {
+    it('has stable dependencies', () => {
+        expect(pkg.dependencies).toMatchInlineSnapshot(`
+            Object {
+              "eslint-config-airbnb-base": "^15.0.0",
+            }
+        `);
     });
 
     it('has stable peerDependencies', () => {
         expect(pkg.peerDependencies).toMatchInlineSnapshot(`
             Object {
+              "@typescript-eslint/eslint-plugin": "^5.0.0",
+              "@typescript-eslint/parser": "^5.0.0",
               "eslint": "^8.2.0",
               "eslint-config-airbnb": "^19.0.2",
               "eslint-config-prettier": "^8.3.0",
@@ -21,10 +27,5 @@ describe('semver - should those tests break, consider releasing a new major vers
               "eslint-plugin-react-hooks": "^4.3.0",
             }
         `);
-    });
-
-    it('has stable config rules', async () => {
-        const computed = await getComputedConfig(config);
-        expect(computed).toMatchSnapshot();
     });
 });
