@@ -4,7 +4,6 @@
   "description": "Shareable ESLint config following Torchbox’s code style",
   "license": "MIT",
   "author": "Torchbox Ltd",
-  "main": "./config.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/torchbox/eslint-config-torchbox.git"
@@ -19,18 +18,32 @@
     "eslint-config",
     "torchbox"
   ],
+  "main": "./config.js",
+  "exports": {
+    ".": "./config.js",
+    "./typescript": "./typescript.js"
+  },
   "files": [
-    "config.js"
+    "config.js",
+    "typescript.js"
   ],
   "devDependencies": {
-    "eslint": "8.4.1",
+    "@typescript-eslint/eslint-plugin": "5.12.0",
+    "@typescript-eslint/parser": "5.12.0",
+    "eslint": "8.9.0",
     "eslint-config-airbnb": "19.0.2",
     "eslint-config-prettier": "8.3.0",
     "eslint-rule-documentation": "1.0.23",
     "jest": "27.5.1",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "typescript": "4.5.5"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
