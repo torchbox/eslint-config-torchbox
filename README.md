@@ -26,18 +26,21 @@ module.exports = {
 
 ### Tips
 
-- Use ESLint’s [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
-- This config is [Prettier](https://prettier.io/)-compatible, but it is still usable by projects which do not wish to use Prettier.
-- We recommend using a `.eslintignore` so ESLint can be targeted at all files, with a blacklist of files to ignore.
-- If relevant, use ESLint’s [`overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) feature to make it more permissive for certain files – for example Storybook stories or unit tests, where code standards are different.
+#### Common CLI flags
 
-Here’s a package.json `run` script and an ignore file to get you started:
+We recommend the following `run` script to add to your `package.json`:
 
 ```json
-"lint:js": "eslint --report-unused-disable-directives .",
+"lint:js": "eslint --ext .js,.ts,.tsx --report-unused-disable-directives .",
 ```
 
-`.eslintignore` (adapt to your project):
+- Use the [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#--ext) flag so ESLint knows which files to lint.
+- Use [`--report-unused-disable-directives`](https://eslint.org/docs/user-guide/command-line-interface#--report-unused-disable-directives) flag to ensure you do not use more `eslint-disable` comments than needed.
+- Consider using ESLint’s [`--cache`](https://eslint.org/docs/user-guide/command-line-interface#--cache) for larger projects.
+
+#### `.eslintignore`
+
+We recommend using a [`.eslintignore`](https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file) to avoid running ESLint over large folders. Note the point of the ignore file isn’t just to determine which JS files we don’t want to be linted, but also speed up linting by excluding large folders. Here’s an example:
 
 ```txt
 .git
@@ -47,7 +50,9 @@ static_compiled
 venv
 ```
 
-Note the point of the ignore file isn’t just to determine which JS files we don’t want to be linted, but also speed up linting by excluding large folders.
+#### `overrides`
+
+If relevant, use ESLint’s [`overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) feature to make it more permissive for certain files – for example Storybook stories or unit tests, where code standards are different.
 
 Here is an example of using `overrides` to disable a few specific rules for stories:
 
@@ -154,9 +159,13 @@ We do not include linting for Vue out of the box. Have a look at the [eslint-plu
 3. Make sure pre-commit hooks are configured to run ESLint on `.vue` files.
 4. If using a custom parser (for example TypeScript’s), make sure to set it up [alongside `vue-eslint-parser` as documented](https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser).
 
+### Prettier
+
+This config is [Prettier](https://prettier.io/)-compatible, there isn’t anything extra needed.
+
 ### Experimental syntax
 
-By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax transpiled with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
+By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
 
 ```js
 module.exports = {
