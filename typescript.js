@@ -273,6 +273,9 @@ module.exports = {
             'node_modules/@types',
         ],
     },
+    env: {
+        ...base.env,
+    },
     rules: {
         ...base.rules,
         ...airbnbTypeScript,
@@ -289,13 +292,18 @@ module.exports = {
             },
         ],
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.tsx'] }],
+        // Disabled so we can lint Node files (Webpack, Vite, Jest) more easily.
+        '@typescript-eslint/no-var-requires': 0,
     },
     overrides: [
         {
-            // Copy from eslint-config-airbnb-typescript
-            // https://github.com/iamturns/eslint-config-airbnb-typescript/blob/d30b7d2a41f3f2cf899cad3ed69e3b7eacbc7234/lib/shared.js#L256
             files: ['*.ts', '*.tsx'],
             rules: {
+                // This is not needed in TypeScript, where `defaultProps` aren’t used,
+                // and function default parameters are introspect-able by the type checker.
+                'react/require-default-props': 0,
+                // Copy from eslint-config-airbnb-typescript
+                // https://github.com/iamturns/eslint-config-airbnb-typescript/blob/d30b7d2a41f3f2cf899cad3ed69e3b7eacbc7234/lib/shared.js#L256
                 // The following rules are enabled in Airbnb config, but are already checked (more thoroughly) by the TypeScript compiler
                 // Some of the rules also fail in TypeScript files, for example: https://github.com/typescript-eslint/typescript-eslint/issues/662#issuecomment-507081586
                 'constructor-super': 'off',
