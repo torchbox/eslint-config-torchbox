@@ -40,6 +40,8 @@ The TypeScript configuration uses the same rules as the base configuration, with
 - Rules which will be checked by the TypeScript compiler anyway are disabled.
 - Rules which would work differently for TypeScript code have been replaced by their [@typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin), where this is possible without requiring type checking as part of linting (see [Design decisions](#design-decisions)).
 
+This configuration can be used as-is even for mixed or JavaScript-only projects, but does require the `typescript` package to be installed.
+
 #### Advanced TypeScript usage
 
 For projects wanting stricter checks, consider using [linting with type information](https://typescript-eslint.io/docs/linting/type-linting/) Here is a sample ESLint configuration:
@@ -146,6 +148,18 @@ module.exports = {
   parser: 'babel-eslint',
 };
 ```
+
+## Design decisions
+
+This configuration strikes a balance between ease of use for users, and ease of maintenance.
+
+- We use the same React-aware configuration everywhere, even non-React projects.
+- We use a separate TypeScript configuration file only due to its experimental nature.
+- There is a single package with a single set of dependencies.
+
+The base configuration is kept very simple, extending from the Airbnb configuration, with Prettier compatibility and more permissive rules.
+
+The TypeScript configuration does not rely on type checking, so it can also be used for JavaScript projects. This will eventually allow us to have a single configuration file for all projects, once the TypeScript support is no longer deemed experimental.
 
 ## What’s included
 
