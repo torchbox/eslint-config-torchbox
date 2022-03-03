@@ -14,7 +14,10 @@ describe('semver for TypeScript rules - should those tests break, consider relea
         expect(computed).toMatchInlineSnapshot(`
             Object {
               "env": Object {
+                "browser": true,
+                "commonjs": true,
                 "es6": true,
+                "jest": true,
                 "node": true,
               },
               "globals": Object {},
@@ -171,7 +174,7 @@ describe('semver for TypeScript rules - should those tests break, consider relea
                   "error",
                 ],
                 "@typescript-eslint/no-var-requires": Array [
-                  "error",
+                  0,
                 ],
                 "@typescript-eslint/object-curly-spacing": Array [
                   "off",
@@ -3002,6 +3005,44 @@ describe('semver for TypeScript rules - should those tests break, consider relea
                 },
               },
             }
+        `);
+    });
+
+    it('has stable overrides', () => {
+        /**
+         * Overrides are snapshotted directly because:
+         * - They aren’t computed in the base configuration (which snapshots the configuration for a `.js` file).
+         * - They’re only at the top level, so it’s enough to snapshot their top-level definition only.
+         */
+        expect(config.overrides).toMatchInlineSnapshot(`
+            Array [
+              Object {
+                "files": Array [
+                  "*.ts",
+                  "*.tsx",
+                ],
+                "rules": Object {
+                  "constructor-super": "off",
+                  "getter-return": "off",
+                  "import/named": "off",
+                  "import/no-unresolved": "off",
+                  "no-const-assign": "off",
+                  "no-dupe-args": "off",
+                  "no-dupe-class-members": "off",
+                  "no-dupe-keys": "off",
+                  "no-func-assign": "off",
+                  "no-new-symbol": "off",
+                  "no-obj-calls": "off",
+                  "no-redeclare": "off",
+                  "no-this-before-super": "off",
+                  "no-undef": "off",
+                  "no-unreachable": "off",
+                  "no-unsafe-negation": "off",
+                  "react/require-default-props": 0,
+                  "valid-typeof": "off",
+                },
+              },
+            ]
         `);
     });
 });
