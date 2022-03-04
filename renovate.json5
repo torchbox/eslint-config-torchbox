@@ -4,7 +4,7 @@
   // https://renovatebot.com/docs/configuration-options/#commitbodytable
   commitBodyTable: true,
   // https://renovatebot.com/docs/configuration-options/#ignoredeps
-  ignoreDeps: [],
+  ignoreDeps: ["eslint-config-prettier", "eslint-config-airbnb", "eslint"],
   // https://renovatebot.com/docs/configuration-options/#labels
   labels: ['enhancement'],
   // https://renovatebot.com/docs/configuration-options/#prcreation
