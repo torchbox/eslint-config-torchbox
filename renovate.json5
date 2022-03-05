@@ -44,5 +44,10 @@
       groupName: 'eslint-rule-documentation',
       automerge: true,
     },
+    {
+      packagePatterns: ['^actions/'],
+      groupName: 'actions',
+      automerge: true,
+    },
   ],
 }
