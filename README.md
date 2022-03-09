@@ -38,7 +38,7 @@ module.exports = {
 The TypeScript configuration uses the same rules as the base configuration, with two exceptions:
 
 - Rules which will be checked by the TypeScript compiler anyway are disabled.
-- Rules which would work differently for TypeScript code have been replaced by their [@typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin), where this is possible without requiring type checking as part of linting (see [Design decisions](#design-decisions)).
+- Rules which would work differently for TypeScript code have been replaced by their [@typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin) counterparts, where this is possible without requiring type checking as part of linting (see [Design decisions](#design-decisions)).
 
 This configuration can be used as-is even for mixed or JavaScript-only projects, but does require the `typescript` package to be installed.
 
@@ -111,7 +111,7 @@ module.exports = {
 
 ### React
 
-This config is meant first and foremost for React projects, where it will detect which rules to apply based on the version of React used on the project. The config can also be used on non-React projects – just make sure to disable the version check by adding: the following in your config:
+This config is meant first and foremost for React projects, where it will detect which rules to apply based on the version of React used on the project. The config can also be used on non-React projects – just make sure to disable the version check by adding the following in your config:
 
 ```js
 module.exports = {
