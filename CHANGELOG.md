@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [0.6.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.5.0...v0.6.0) (2022-03-09)
+
+## Features
+
+- Built-in [TypeScript support](https://github.com/torchbox/eslint-config-torchbox#typescript), via an experimental opt-in `torchbox/typescript` configuration.
+- Additional peerDependencies added for TypeScript support: `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser`. Both will be installed automatically in npm v7+, and should not change how the base configuration works in any way.
+
 ## [0.5.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.4.0...v0.5.0) (2021-12-13)
 
 ## Features
