@@ -44,7 +44,7 @@ This configuration can be used as-is even for mixed or JavaScript-only projects,
 
 #### Advanced TypeScript usage
 
-For projects wanting stricter checks, consider using [linting with type information](https://typescript-eslint.io/docs/linting/type-linting/) Here is a sample ESLint configuration:
+For projects wanting stricter checks, consider using [linting with type information](https://typescript-eslint.io/docs/linting/type-linting/). Here is a sample ESLint configuration:
 
 ```js
 module.exports = {
