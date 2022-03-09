@@ -310,12 +310,14 @@ module.exports = {
                 'getter-return': 'off',
                 'no-const-assign': 'off',
                 'no-dupe-args': 'off',
-                'no-dupe-class-members': 'off',
+                // Already disabled for all files.
+                // 'no-dupe-class-members': 'off',
                 'no-dupe-keys': 'off',
                 'no-func-assign': 'off',
                 'no-new-symbol': 'off',
                 'no-obj-calls': 'off',
-                'no-redeclare': 'off',
+                // Already disabled for all files.
+                // 'no-redeclare': 'off',
                 'no-this-before-super': 'off',
                 'no-undef': 'off',
                 'no-unreachable': 'off',
