@@ -38,12 +38,13 @@
     enabled: true,
   },
   packageRules: [
-    {
-      matchDepTypes: ['peerDependencies'],
-      enabled: false,
-    },
     { packageNames: ['prettier'], groupName: 'prettier', automerge: true },
     { packageNames: ['jest'], groupName: 'jest', automerge: true },
+    {
+      packagePatterns: ['typescript', '^@typescript-eslint/'],
+      groupName: 'typescript',
+      automerge: true,
+    },
     {
       packageNames: ['eslint-rule-documentation'],
       groupName: 'eslint-rule-documentation',
@@ -53,6 +54,10 @@
       packagePatterns: ['^actions/'],
       groupName: 'actions',
       automerge: true,
+    },
+    {
+      matchDepTypes: ['peerDependencies'],
+      enabled: false,
     },
   ],
 }
