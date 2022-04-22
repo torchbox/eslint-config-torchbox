@@ -19,7 +19,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm install --no-optional --no-audit --no-fund --progress=false
+      - run: npm ci
       - run: npm run lint
       - run: npm run test
       # Log the contents of the published package in CI builds.
