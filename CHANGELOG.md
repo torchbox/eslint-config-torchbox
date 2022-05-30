@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [1.0.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.6.0...v1.0.0) (2022-05-30)
+
+> This release is functionally identical to v0.6.0.
+
+The project has reached a high-enough level of stability, with no breaking changes expected in minor releases outside of rules changes [as per ESLint’s policy](https://github.com/eslint/eslint#semantic-versioning-policy).
+
+Note the [experimental TypeScript support](https://github.com/torchbox/eslint-config-torchbox#typescript) is still _experimental_, and opt-in, and as such may still change in minor or patch releases.
+
 ## [0.6.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.5.0...v0.6.0) (2022-03-09)
 
 ## Features
