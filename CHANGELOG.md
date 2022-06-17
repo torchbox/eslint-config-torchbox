@@ -16,14 +16,42 @@ Note the [experimental TypeScript support](https://github.com/torchbox/eslint-co
 
 ## [0.6.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.5.0...v0.6.0) (2022-03-09)
 
-## Features
+### Features
 
 - Built-in [TypeScript support](https://github.com/torchbox/eslint-config-torchbox#typescript), via an experimental opt-in `torchbox/typescript` configuration.
 - Additional peerDependencies added for TypeScript support: `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser`. Both will be installed automatically in npm v7+, and should not change how the base configuration works in any way.
 
+### Upgrading to v0.6.0
+
+Here are recommended steps:
+
+```bash
+# 1. Install the new versions.
+npm install --save-dev eslint@7 eslint-config-torchbox@0.6.0
+# 2. Attempt to auto-fix any new issue picked up by ESLint.
+npm run lint:js -- --fix
+npm run format
+# 3. Check if there are remaining issues
+npm run lint:js
+```
+
+If there are remaining issues, consider a gradual approach: whether you want to update the code, or disable the corresponding rules. This can be done either in the ESLint configuration (globally or via [overrides](https://github.com/torchbox/eslint-config-torchbox#overrides)), or via [`eslint-disable` configuration comments](https://eslint.org/docs/user-guide/configuring/rules#disabling-rules). Get the rules reporting issues with: `npm run lint:js -- --format tap | grep ruleId | cut -d ':' -f 2 | cut -c 2- | sort | uniq`.
+
+#### Custom TypeScript linting
+
+For projects previously using custom TypeScript linting, review our guidance on [linting setup for ongoing projects](https://github.com/torchbox/eslint-config-torchbox#linting-setup-for-ongoing-projects).
+
+#### Migrate from Babel
+
+Projects previously using Babel for linting can now remove the `babel-eslint` or `@babel/eslint-parser` dependencies.
+
+---
+
+Finally, if your project uses separate dependencies definitions for [pre-commit](https://github.com/torchbox/eslint-config-torchbox#pre-commit) hooks, make sure to update them similarly.
+
 ## [0.5.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.4.0...v0.5.0) (2021-12-13)
 
-## Features
+### Features
 
 - Update to ESLint v8 and [eslint-config-airbnb v19.0.2](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md), changing rules that are applied with this config.
 
@@ -77,9 +105,27 @@ Users of npm v7 can `npm install --save-dev eslint-config-torchbox@latest` and t
 
 For older versions of npm, use `npx install-peerdeps --dev eslint-config-torchbox@latest` so all other peerDependencies are updated as well.
 
+### Upgrading to v0.5.0
+
+Here are recommended steps:
+
+```bash
+# 1. Install the new versions.
+npm install --save-dev eslint@8 eslint-config-torchbox@0.5.0
+# 2. Attempt to auto-fix any new issue picked up by ESLint.
+npm run lint:js -- --fix
+npm run format
+# 3. Check if there are remaining issues
+npm run lint:js
+```
+
+If there are remaining issues, consider a gradual approach: whether you want to update the code, or disable the corresponding rules. This can be done either in the ESLint configuration (globally or via [overrides](https://github.com/torchbox/eslint-config-torchbox#overrides)), or via [`eslint-disable` configuration comments](https://eslint.org/docs/user-guide/configuring/rules#disabling-rules). Get the rules reporting issues with: `npm run lint:js -- --format tap | grep ruleId | cut -d ':' -f 2 | cut -c 2- | sort | uniq`. For projects strapped for time, disabling all new rules listed above may be a reasonable tradeoff.
+
+Finally, if your project uses separate dependencies definitions for [pre-commit](https://github.com/torchbox/eslint-config-torchbox#pre-commit) hooks, make sure to update them similarly.
+
 ## [0.4.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.3...v0.4.0) (2021-07-15)
 
-## Features
+### Features
 
 - Update to ESLint v7 and [eslint-config-airbnb v18.2.1](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md), changing rules that are applied with this config.
 - Update to eslint-config-prettier v8, which no longer requires specifying sub-configurations separately for different frameworks or syntaxes.
@@ -132,6 +178,24 @@ Users of npm v7 can `npm install --save-dev eslint-config-torchbox@latest` and t
 
 For older versions of npm, use `npx install-peerdeps --dev eslint-config-torchbox@latest` so all other peerDependencies are updated as well.
 
+### Upgrading to v0.4.0
+
+Here are recommended steps:
+
+```bash
+# 1. Install the new versions.
+npm install --save-dev eslint@7 eslint-config-torchbox@0.4.0
+# 2. Attempt to auto-fix any new issue picked up by ESLint.
+npm run lint:js -- --fix
+npm run format
+# 3. Check if there are remaining issues
+npm run lint:js
+```
+
+If there are remaining issues, consider a gradual approach: whether you want to update the code, or disable the corresponding rules. This can be done either in the ESLint configuration (globally or via [overrides](https://github.com/torchbox/eslint-config-torchbox#overrides)), or via [`eslint-disable` configuration comments](https://eslint.org/docs/user-guide/configuring/rules#disabling-rules). Get the rules reporting issues with: `npm run lint:js -- --format tap | grep ruleId | cut -d ':' -f 2 | cut -c 2- | sort | uniq`.
+
+Finally, if your project uses separate dependencies definitions for [pre-commit](https://github.com/torchbox/eslint-config-torchbox#pre-commit) hooks, make sure to update them similarly.
+
 ## [0.3.3](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.2...v0.3.3) (2020-03-12)
 
 ### Bug fixes
@@ -175,6 +239,10 @@ To update, use `npx install-peerdeps --dev eslint-config-torchbox@latest` so all
 
 Additionally, this config now requires `react` to be defined as a dependency on the project. Please refer to our [React configuration instructions](https://github.com/torchbox/eslint-config-torchbox#react) if you wish to bypass this.
 
+### Upgrading to v0.3.0
+
+Projects considering this release should [skip straight to v0.4.0](https://github.com/torchbox/eslint-config-torchbox/blob/main/CHANGELOG.md#upgrading-to-v040).
+
 ## [0.2.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.1.0...v0.2.0) (2019-07-16)
 
 ### Features
@@ -185,6 +253,10 @@ Additionally, this config now requires `react` to be defined as a dependency on 
 #### BREAKING CHANGES
 
 - The configuration is now defined based on [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) ([#1](https://github.com/torchbox/eslint-config-torchbox/issues/1), [#2](https://github.com/torchbox/eslint-config-torchbox/pull/2)).
+
+### Upgrading to v0.2.0
+
+Projects considering this release should [skip straight to v0.4.0](https://github.com/torchbox/eslint-config-torchbox/blob/main/CHANGELOG.md#upgrading-to-v040).
 
 ## [0.1.0](https://github.com/torchbox/eslint-config-torchbox/releases/tag/v0.1.0) (2019-07-04)
 

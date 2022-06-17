@@ -63,6 +63,12 @@ module.exports = {
 
 ### Tips
 
+#### Linting setup for ongoing projects
+
+Review our [CHANGELOG](https://github.com/torchbox/eslint-config-torchbox/blob/main/CHANGELOG.md) for guidance on how to upgrade a project’s linting to a specific version.
+
+More generally, when retrofitting stricter linting onto an existing project, consider [a gradual approach to linting strictness](https://thib.me/upgrading-to-stricter-eslint-config), so you can start using linting without having to change significant portions of the project’s code.
+
 #### Common CLI flags
 
 We recommend the following `run` script to add to your `package.json`:
