@@ -136,6 +136,53 @@ We do not include linting for Vue out of the box. Have a look at the [eslint-plu
 
 This config is [Prettier](https://prettier.io/)-compatible, there isn’t anything extra needed.
 
+### pre-commit
+
+The [pre-commit](https://pre-commit.com/) pre-commit hook framework doesn’t work well with ESLint. There are three major points to set up correctly:
+
+- Peer dependencies aren’t automatically installed like in other npm v7+ environment. We need to tell pre-commit what to install via its `additional_dependencies` configuration.
+- Dependency versions aren’t locked. Always pin exact versions in the configuration to have as stable of an installation as possible.
+- By default, the ESLint hook will only run `.js` files. Make sure to override its `types` attribute as well as `files` with the correct extensions (TypeScript, Vue).
+
+Here is a sample setup with our recommended configuration:
+
+```yaml
+default_language_version:
+  node: system
+repos:
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.10.0
+    hooks:
+      - id: eslint
+        types: [file]
+        files: \.(js|ts|tsx)$
+        args: [--report-unused-disable-directives]
+        additional_dependencies:
+          # Use the same versions as the project’s package-lock.json.
+          - eslint@8.10.0
+          - eslint-config-torchbox@1.0.0
+          - typescript@4.6.2
+          # Even on npm v7+, we need to specify all peerDependencies
+          # as pre-commit installs `additional_dependencies` globally.
+          - '@typescript-eslint/eslint-plugin@5.14.0'
+          - '@typescript-eslint/parser@5.14.0'
+          - eslint-config-airbnb@19.0.4
+          - eslint-config-prettier@8.5.0
+          - eslint-plugin-import@2.25.4
+          - eslint-plugin-jsx-a11y@6.5.1
+          - eslint-plugin-react@7.29.3
+          - eslint-plugin-react-hooks@4.3.0
+```
+
+The latest versions to install can be resolved with either:
+
+```bash
+# Retrieve latest versions from npm:
+npx install-peerdeps --dry-run --dev eslint-config-torchbox@latest
+# Or retrieve currently-installed versions from the current project:
+npm ls eslint eslint-config-torchbox typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks | grep -v deduped
+```
+
 ### Experimental syntax
 
 By default, this config uses ESLint’s built-in parser, which doesn’t support [experimental ECMAScript features](https://github.com/eslint/eslint/blob/a675c89573836adaf108a932696b061946abf1e6/README.md#what-about-experimental-features). If your code uses experimental syntax with Babel, make sure to set the ESLint parser to [babel-eslint](https://github.com/babel/babel-eslint):
@@ -154,12 +201,19 @@ module.exports = {
 This configuration strikes a balance between ease of use for users, and ease of maintenance.
 
 - We use the same React-aware configuration everywhere, even non-React projects.
-- We use a separate TypeScript configuration file only due to its experimental nature.
 - There is a single package with a single set of dependencies.
 
 The base configuration is kept very simple, extending from the Airbnb configuration, with Prettier compatibility and more permissive rules.
 
-The TypeScript configuration does not rely on type checking, so it can also be used for JavaScript projects. This will eventually allow us to have a single configuration file for all projects, once the TypeScript support is no longer deemed experimental.
+### TypeScript support
+
+We use a separate TypeScript configuration file only due to its experimental nature. The TypeScript configuration does not rely on type checking, so it can also be used for JavaScript projects.
+
+In the future, we may decide to use TypeScript for the default configuration, and have a separate configuration file for vanilla JS projects. Or document how to use the TypeScript configuration on vanilla projects (resetting the `parser` should be the only necessary change).
+
+### Dependencies as peerDependencies
+
+Most of the configuration’s dependencies are specified as `peerDependencies`. This is necessary due to how ESLint configurations resolve their dependencies – see [Support having plugins as dependencies in shareable config #3458](https://github.com/eslint/eslint/issues/3458). This will be changed in a future version of ESLint.
 
 ## What’s included
 
