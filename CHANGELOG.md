@@ -27,7 +27,7 @@ Here are recommended steps:
 
 ```bash
 # 1. Install the new versions.
-npm install --save-dev eslint@7 eslint-config-torchbox@0.6.0
+npm install --save-dev eslint@7 eslint-config-torchbox@^0.6.0
 # 2. Attempt to auto-fix any new issue picked up by ESLint.
 npm run lint:js -- --fix
 npm run format
@@ -111,7 +111,7 @@ Here are recommended steps:
 
 ```bash
 # 1. Install the new versions.
-npm install --save-dev eslint@8 eslint-config-torchbox@0.5.0
+npm install --save-dev eslint@8 eslint-config-torchbox@^0.5.0
 # 2. Attempt to auto-fix any new issue picked up by ESLint.
 npm run lint:js -- --fix
 npm run format
@@ -184,7 +184,7 @@ Here are recommended steps:
 
 ```bash
 # 1. Install the new versions.
-npm install --save-dev eslint@7 eslint-config-torchbox@0.4.0
+npm install --save-dev eslint@7 eslint-config-torchbox@^0.4.0
 # 2. Attempt to auto-fix any new issue picked up by ESLint.
 npm run lint:js -- --fix
 npm run format
