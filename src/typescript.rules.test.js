@@ -622,6 +622,7 @@ describe('semver for TypeScript rules - should those tests break, consider relea
                       "**/setupTests.*",
                       "**/webpack.config.*",
                       "**/rollup.config.*",
+                      "**/tailwind.config.*",
                       "**/gulpfile.*",
                     ],
                     "optionalDependencies": false,

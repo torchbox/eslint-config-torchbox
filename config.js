@@ -51,6 +51,7 @@ module.exports = {
                     '**/setupTests.*',
                     '**/webpack.config.*',
                     '**/rollup.config.*',
+                    '**/tailwind.config.*',
                     '**/gulpfile.*',
                 ],
                 optionalDependencies: false,

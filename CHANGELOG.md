@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [1.1.0](https://github.com/torchbox/eslint-config-torchbox/compare/v1.0.0...v1.1.0) (2022-07-01)
+
+### Features
+
+- Allow `tailwind.config` files for devDependencies imports check.
+
+### Upgrading to v1.1.0
+
+Follow the [v0.6.0 recommended steps](https://github.com/torchbox/eslint-config-torchbox/blob/main/CHANGELOG.md#upgrading-to-v060), with `1.1.0` as the version number.
+
+Then, if your project disabled `import/no-extraneous-dependencies` for Tailwind configuration files, this can now be removed.
+
 ## [1.0.0](https://github.com/torchbox/eslint-config-torchbox/compare/v0.6.0...v1.0.0) (2022-05-30)
 
 > This release is functionally identical to v0.6.0.
@@ -27,7 +39,7 @@ Here are recommended steps:
 
 ```bash
 # 1. Install the new versions.
-npm install --save-dev eslint@7 eslint-config-torchbox@^0.6.0
+npm install --save-dev eslint@8 eslint-config-torchbox@^0.6.0
 # 2. Attempt to auto-fix any new issue picked up by ESLint.
 npm run lint:js -- --fix
 npm run format
@@ -206,7 +218,7 @@ Finally, if your project uses separate dependencies definitions for [pre-commit]
 
 ### Bug fixes
 
-- Whitelist `setupTests` files for devDependencies imports check.
+- Allow `setupTests` files for devDependencies imports check.
 
 ## [0.3.1](https://github.com/torchbox/eslint-config-torchbox/compare/v0.3.0...v0.3.1) (2019-10-09)
 

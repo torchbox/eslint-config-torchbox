@@ -503,6 +503,7 @@ describe('semver for rules - should those tests break, consider releasing a new 
                       "**/setupTests.*",
                       "**/webpack.config.*",
                       "**/rollup.config.*",
+                      "**/tailwind.config.*",
                       "**/gulpfile.*",
                     ],
                     "optionalDependencies": false,
