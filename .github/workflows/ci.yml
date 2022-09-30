@@ -25,4 +25,4 @@ jobs:
       - run: npm run lint
       - run: npm run test
       # Log the contents of the published package in CI builds.
-      - run: npm pack --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //' && rm *.tgz
+      - run: npm pack --dry-run --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //'
