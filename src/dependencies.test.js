@@ -5,7 +5,7 @@ const pkg = require('../package.json');
 describe('semver for dependencies - should those tests break, consider releasing a new major version of the package', () => {
     it('has stable dependencies', () => {
         expect(pkg.dependencies).toMatchInlineSnapshot(`
-            Object {
+            {
               "eslint-config-airbnb-base": "^15.0.0",
             }
         `);
@@ -13,7 +13,7 @@ describe('semver for dependencies - should those tests break, consider releasing
 
     it('has stable peerDependencies', () => {
         expect(pkg.peerDependencies).toMatchInlineSnapshot(`
-            Object {
+            {
               "@typescript-eslint/eslint-plugin": "^5.0.0",
               "@typescript-eslint/parser": "^5.0.0",
               "eslint": "^8.2.0",
