@@ -1,7 +1,5 @@
 # [eslint-config-torchbox](https://www.npmjs.com/package/eslint-config-torchbox) [<img src="https://raw.githubusercontent.com/torchbox/eslint-config-torchbox/main/.github/eslint-logo.svg?sanitize=true" alt="ESLint" width="90" height="90" align="right">](https://eslint.org)
 
-[![eslint-config-torchbox on npm](https://img.shields.io/npm/v/eslint-config-torchbox.svg)](https://www.npmjs.com/package/eslint-config-torchbox) [![Build status](https://github.com/torchbox/eslint-config-torchbox/workflows/Continuous%20Integration/badge.svg)](https://github.com/torchbox/eslint-config-torchbox/actions)
-
 > Shareable ESLint config following Torchbox’s code style.
 
 ## Usage
